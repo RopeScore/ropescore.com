@@ -29,7 +29,32 @@ body {
 
 p {
   margin-bottom: .3em;
-  max-width: 60%;
+  max-width: 600px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  color: #666;
+}
+
+@media all and (min-width: 1000px) {
+  .content {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    max-width: 600px;
+  }
+  .brand {
+    position: fixed;
+    top: 53px;
+    left: .5em;
+  }
+  footer {
+    position: fixed;
+    bottom: .7em;
+    left: .5em;
+  }
 }
 
 a {
@@ -61,12 +86,6 @@ button, .button {
 
 button:hover, button:disabled, .button:hover {
   background-color: #ccc;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  color: #666;
 }
 
 .mb {
@@ -107,7 +126,7 @@ ol li:before {
 }
 
 img {
-  max-width: 60%;
+  max-width: 600px;
   border: 1px solid #ddd;
 }
 
