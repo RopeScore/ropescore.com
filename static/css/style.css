@@ -17,6 +17,16 @@ body {
   font-family: monospace;
 }
 
+.logo {
+  height: 1em;
+  margin-bottom: -.15em;
+  border: none;
+}
+
+.huge {
+  font-size: 4em;
+}
+
 p {
   margin-bottom: .3em;
   max-width: 60%;
@@ -117,7 +127,6 @@ table.center {
   margin: auto;
 }
 
-
 /* nav */
 
 nav {
@@ -200,7 +209,6 @@ nav ul li:hover:not(:first-child) {
   background-color: #bbb;
 }
 
-
 /* dash */
 
 .flex-container {
@@ -229,7 +237,6 @@ nav ul li:hover:not(:first-child) {
   width: 100%;
   padding: .3em;
 }
-
 
 /* forms */
 
@@ -276,7 +283,6 @@ input.ng-invalid {
 input.yellow {
   border: 2px solid orange;
 }
-
 
 /* tables */
 
