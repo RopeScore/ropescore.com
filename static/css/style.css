@@ -19,6 +19,7 @@ body {
 
 .logo {
   height: 1em;
+  width: 1em;
   margin-bottom: -.15em;
   border: none;
 }
@@ -126,6 +127,7 @@ ol li:before {
 }
 
 img {
+  width: 100%;
   max-width: 600px;
   border: 1px solid #ddd;
 }
