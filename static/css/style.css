@@ -45,6 +45,7 @@ footer {
     top: 60px;
     right: 0;
     max-width: 600px;
+    width: 100%;
   }
   .brand {
     position: fixed;
