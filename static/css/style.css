@@ -6,10 +6,10 @@
 }
 
 body {
-  margin: .5em;
+  padding: .5em;
   padding-top: 45px;
   padding-bottom: 1em;
-  min-height: 97vh;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -35,7 +35,7 @@ p {
 
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: .5em;
   color: #666;
 }
 
