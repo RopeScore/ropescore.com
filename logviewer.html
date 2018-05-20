@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="theme-color" content="#efefef">
+    <link rel="manifest" href="/static/manifest.json">
+    <link rel="preload" href="/static/img/icon.png" as="image">
+    <link rel="icon" href="/static/img/icon.png">
+    <title>RopeScore</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/static/css/logViewer.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans|Ubuntu+Mono" rel="stylesheet">
+  <body>
+    <nav>
+      <ul class="topnav">
+        <li onclick="window.location.pathname = '/'" class="pointer">
+          <div>RopeScore</div>
+        </li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/screenshots">Screenshots</a></li>
+        <li><a href="/testdata">Testdata</a></li>
+        <li><a href="/logviewer">Log Viewer</a></li>
+      </ul>
+    </nav>
+    <div id="app">
+      <div class="brand" v-if="!loaded">
+        <h1 class="huge">
+          <img src="/static/img/icon.png" alt="logo" class="logo"/>
+          RopeScore
+        </h1>
+        <h2>A Scoring System for Rope Skipping</h2>
+      </div>
+      <div class="content" id="app" v-cloak>
+        <div v-if="!loaded">
+          <p>
+            This page is intended for developers. You can load a log file from RopeScore
+            below (it will not be uploaded to the internet) to view it's contents, this can
+            be useful if you run into any problems with the system, but do note that the log files
+            are very technical and might be hard to understand if you are not a developer.
+          </p>
+          <input type="file" @change="parseFile" />
+        </div>
+
+        <div v-else>
+          <div class="options">
+            <button @click="reset()">Close {{ filename }}</button>
+            <ul>
+              <li>Types to display: </li>
+              <li v-for="(_, type) in types" class="checkbox"><input type="checkbox" v-model="types[type]" /> {{ type }}</li>
+            </ul>
+          </div>
+          <error v-for="(error, index) in filtered" :key="index" :error="error"></error>
+        </div>
+      </div>
+    </div>
+    <footer>
+      © Svante Bengtson 2017-2018
+    </footer>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js" integrity="sha256-CMMTrj5gGwOAXBeFi7kNokqowkzbeL8ydAJy39ewjkQ=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-linkify/2.1.6/linkify.js" integrity="sha256-QPkwl6+2k/wJ3Dv8QoBs5vy1fVnuqF536cQL04Chv+w=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-linkify/2.1.6/linkify-string.js" integrity="sha256-Luk50WKJG9dx37SLYjjtL1BMoU3GzArNrNLA0ywDaHQ=" crossorigin="anonymous"></script>
+    <script src="/logviewer.js"></script>
