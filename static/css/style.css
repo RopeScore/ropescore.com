@@ -345,6 +345,6 @@ th, td {
   width: 33vw;
 }
 
-tbody tr:nth-child(even) td {
+tbody tr:nth-child(even) {
   background-color: #eee;
 }
