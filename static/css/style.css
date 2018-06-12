@@ -43,7 +43,7 @@ footer {
   .brand+.content {
     position: absolute;
     top: 60px;
-    right: 0;
+    right: .5em;
     max-width: 600px;
     width: 100%;
   }
