@@ -1,86 +1,36 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="theme-color" content="#efefef">
-    <link rel="manifest" href="/static/manifest.json">
-    <link rel="preload" href="/static/img/icon.png" as="image">
-    <link rel="icon" href="/static/img/icon.png">
-    <title>RopeScore - Screenshots</title>
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-  </head>
-  <body>
-    <nav>
-      <ul class="topnav">
-        <li onclick="window.location.pathname = '/'" class="pointer">
-          <div>RopeScore</div>
-        </li>
-        <li><a href="/">Home</a></li>
-        <li><a href="/screenshots">Screenshots</a></li>
-        <li><a href="/testdata">Testdata</a></li>
-        <li><a href="/logviewer">Log Viewer</a></li>
-      </ul>
-    </nav>
+---
+layout: default
+title: Screenshots
+---
 
-    <div class="brand">
-      <h1 class="huge">
-        <img src="/static/img/icon.png" alt="logo" class="logo"/>
-        RopeScore
-      </h1>
-      <h2>A Scoring System for Rope Skipping</h2>
-      <p><a href="https://ropescore.live">Looking for Live results? Click here</a></p>
-    </div>
+<h1>Screenshots</h1>
 
-    <div class="content">
-      <p>Get in touch: <a href="mailto:contact@ropescore.com">contact@ropescore.com</a></p>
+<label class="gray mb">
+  <img src="{{ "/static/img/dash.png" | relative_url }}" alt="Dashboard"/><br/>
+  Dashboard
+</label>
 
-      <h1>Screenshots</h1>
+<label class="gray mb">
+  <img src="{{ "/static/img/conf.png" | relative_url }}" alt="Category Configuration"/><br/>
+  Category Configuration
+</label>
 
-      <label class="gray mb">
-        <img src="/static/img/dash.png" alt="Dashboard"/><br/>
-        Dashboard
-      </label>
+<label class="gray mb">
+  <img src="{{ "/static/img/parts.png" | relative_url }}" alt="Participans Configuration"/><br/>
+  Participants Configuration
+</label>
 
-      <label class="gray mb">
-        <img src="/static/img/conf.png" alt="Category Configuration"/><br/>
-        Category Configuration
-      </label>
+<label class="gray mb">
+  <img src="{{ "/static/img/cat.png" | relative_url }}" alt="Category"/><br/>
+  Category
+</label>
 
-      <label class="gray mb">
-        <img src="/static/img/parts.png" alt="Participans Configuration"/><br/>
-        Participants Configuration
-      </label>
+<label class="gray mb">
+  <img src="{{ "/static/img/score.png" | relative_url }}" alt="Freestyle Score Entering"/><br/>
+  Freestyle Score Entering
+</label>
 
-      <label class="gray mb">
-        <img src="/static/img/cat.png" alt="Category"/><br/>
-        Category
-      </label>
-
-      <label class="gray mb">
-        <img src="/static/img/score.png" alt="Freestyle Score Entering"/><br/>
-        Freestyle Score Entering
-      </label>
-
-      <label class="gray mb">
-        <img src="/static/img/live.png" alt="Live scoring"/><br/>
-        Live freestyle scores
-      </label>
-    </div>
-
-    <footer>
-      &copy; Svante Bengtson 2017-2018
-    </footer>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121325052-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-121325052-1');
-    </script>
+<label class="gray mb">
+  <img src="{{ "/static/img/live.png" | relative_url }}" alt="Live scoring"/><br/>
+  Live freestyle scores
+</label>

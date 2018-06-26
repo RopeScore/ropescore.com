@@ -1,63 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="theme-color" content="#efefef">
-    <link rel="manifest" href="/static/manifest.json">
-    <link rel="preload" href="/static/img/icon.png" as="image">
-    <link rel="icon" href="/static/img/icon.png">
-    <title>RopeScore - Not Found</title>
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-  </head>
-  <body>
-    <nav>
-      <ul class="topnav">
-        <li onclick="window.location.pathname = '/'" class="pointer">
-          <div>RopeScore</div>
-        </li>
-        <li><a href="/">Home</a></li>
-        <li><a href="/screenshots">Screenshots</a></li>
-        <li><a href="/testdata">Testdata</a></li>
-        <li><a href="/logviewer">Log Viewer</a></li>
-      </ul>
-    </nav>
+---
+layout: default
+title: Not Found
+noindex: true
+---
 
-    <div class="brand">
-      <h1 class="huge">
-        <img src="/static/img/icon.png" alt="logo" class="logo"/>
-        RopeScore
-      </h1>
-      <h2>A Scoring System for Rope Skipping</h2>
-      <p><a href="https://ropescore.live">Looking for Live results? Click here</a></p>
-    </div>
+<p>
+  The page you've tried to reach does not exist, sorry. Try the navigation
+  links at the top of the page.
+</p>
+<p>
+  Alternatively check out the same URL on RopeScore Live by
+  <a href="https://ropescore.live" target="_blank" id="rsliveurl">clicking here</a>
+</p>
 
-    <div class="content">
-      <p>Get in touch: <a href="mailto:contact@ropescore.com">contact@ropescore.com</a></p>
-
-      <p>
-        The page you've tried to reach does not exist, sorry. Try the navigation links at the top of the page.
-      </p>
-      <p>Alternatively check out the same URL on RopeScore Live by <a href="https://ropescore.live" target="_blank" id="rsliveurl">clicking here</a></p>
-    </div>
-
-    <footer>
-      &copy; Svante Bengtson 2017-2018
-    </footer>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121325052-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-121325052-1');
-    </script>
-
-    <script>
-      document.getElementById('rsliveurl').href = 'https://ropescore.live' + window.location.pathname
-    </script>
+<script>
+  document.getElementById('rsliveurl').href = 'https://ropescore.live' + window.location.pathname
+</script>

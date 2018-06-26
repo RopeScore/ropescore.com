@@ -1,0 +1,7 @@
+<footer>
+  &copy; Svante Bengtson 2017-{{ site.time | date: "%Y" }}
+</footer>
+{{ site.google_analytics }}
+{%- if site.google_analytics -%}
+  {%- include google-analytics.html -%}
+{%- endif -%}
