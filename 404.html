@@ -33,6 +33,7 @@
         RopeScore
       </h1>
       <h2>A Scoring System for Rope Skipping</h2>
+      <p><a href="https://ropescore.live">Looking for Live results? Click here</a></p>
     </div>
 
     <div class="content">
@@ -41,6 +42,7 @@
       <p>
         The page you've tried to reach does not exist, sorry. Try the navigation links at the top of the page.
       </p>
+      <p>Alternatively check out the same URL on RopeScore Live by <a href="https://ropescore.live" target="_blank" id="rsliveurl">clicking here</a></p>
     </div>
 
     <footer>
@@ -54,4 +56,8 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-121325052-1');
+    </script>
+
+    <script>
+      document.getElementById('rsliveurl').href = 'https://ropescore.live' + window.location.pathname
     </script>
