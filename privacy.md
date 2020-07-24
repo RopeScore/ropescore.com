@@ -3,9 +3,7 @@ layout: default
 title: Privacy and Cookie Policy
 ---
 
-# Privacy Policy
-
-The company Swantzer, located in Sweden owns and operates RopeScore.
+The company Swantzter, located in Sweden owns and operates RopeScore.
 
 ### Swantzer may collect the following data
 

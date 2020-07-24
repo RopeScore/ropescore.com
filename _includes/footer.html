@@ -1,7 +1,14 @@
-<footer>
-  &copy;
-  <a href="https://swantzter.se" target="_blank" rel="noopener">Swantzter</a>
-  2017-{{ site.time | date: "%Y" }}
+<footer class="text-gray-700 body-font bg-gray-200 pin-b w-full p-4">
+  <div class="flex flex-col sm:flex-row sm:justify-between container mx-auto">
+    <div>
+      &copy;
+      <a href="https://swantzter.se" target="_blank" rel="noopener">Swantzter</a>
+      2017-{{ site.time | date: "%Y" }}
+    </div>
+    <div>
+      <a href="mailto:{{ site.email }}" target="_blank" class="text-gray-600 hover:text-gray-700">{{ site.email }}</a>
+    </div>
+  </div>
 </footer>
 {%- if site.ga -%}
   {%- include google-analytics.html -%}

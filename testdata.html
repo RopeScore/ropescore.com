@@ -1,0 +1,41 @@
+---
+layout: default
+title: Testing
+---
+
+<p class="w-full leading-relaxed text-base mb-4">
+  With a scoring system the stakes are often high, and you need to know that the
+  results are accurate. RopeScore pioneered providing public data for testing when
+  we published test data for FISAC-IRSF's 2017-2018 ruleset containing a teams
+  competition with 12 competing teams, a masters competiton with 12 competing skippers and
+  a triple under competition with 14 competing skippers.
+</p>
+
+<p class="w-full leading-relaxed text-base mb-4">
+  Providing all this data makes RopeScore more transparent, anyone can check that
+  the system does what it is supposed to do, and other scoring systems can confirm
+  their accuracy with this data as well.
+</p>
+
+<p class="w-full leading-relaxed text-base mb-4">
+  All our test data is published under a
+  <a href="http://creativecommons.org/licenses/by/4.0/" class="text-indigo-500 hover:text-indigo-800 underline" target="_blank" rel="noopener">Creative Commons Attribution 4.0 International License</a>.
+</p>
+
+<p class="w-full leading-relaxed text-base mb-4">
+  The test data is meant to cover the edge cases in the rules that could be
+  interpreted in multiple ways. And provide the data in a way that can be entered
+  into any scoring system and return the same results. We are committed to creating
+  new test data for more rulesets that RopeScore support.
+</p>
+
+{% for testdata in site.data.testdata %}
+<div class="pb-4">
+  <h2 class="text-xl font-medium title-font mb-2">{{ testdata.ruleset }}</h2>
+  <ul class="list-disc pl-6">
+    {% for file in testdata.files %}
+    <li><a class="text-indigo-500 hover:text-indigo-800 underline" href="/static/testdata/{{ testdata.folder }}/{{ file.path }}" target="_blank" rel="noopener">{{ file.name }}</a></td>
+    {% endfor %}
+  </ul>
+</div>
+{% endfor %}

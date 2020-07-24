@@ -1,0 +1,41 @@
+---
+layout: default
+title: Scoresheets
+---
+
+<div class="text-center">
+  <p class="mx-auto lg:w-1/2 w-full leading-relaxed text-base mb-4">
+    RopeScore is built to work with competitions run on paper,
+    we've prepared scoresheets for several rulesets RopeScore support
+    to help you get up and running quickly.
+  </p>
+</div>
+
+<table class="table-auto w-full hidden sm:table">
+  <thead>
+    <tr class="border-b">
+      <th class="px-4 py-2 text-right">Ruleset</th>
+      <th class="px-4 py-2 text-left">PDF</th>
+      <th class="px-4 py-2 text-left">ZIP</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for scoresheet in site.data.scoresheets %}
+    <tr class="{% cycle '', 'bg-gray-100' %} border-b">
+      <th class="px-4 py-2 text-right">{{ scoresheet.ruleset }}</th>
+      <td class="px-4 py-2"><a class="text-indigo-500 hover:text-indigo-800 underline" href="/static/scoresheets/{{ scoresheet.folder }}/{{ scoresheet.fileBase }}.pdf" target="_blank" rel="noopener" aria-label="{{ scoresheet.ruleset }} PDF Download">Download</a></td>
+      <td class="px-4 py-2"><a class="text-indigo-500 hover:text-indigo-800 underline" href="/static/scoresheets/{{ scoresheet.folder }}/{{ scoresheet.fileBase }}.zip" target="_blank" rel="noopener" aria-label="{{ scoresheet.ruleset }} ZIP Download">Download</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% for scoresheet in site.data.scoresheets %}
+<div class="sm:hidden pb-4 pl-6">
+  <h2 class="text-xl font-medium title-font mb-2">{{ scoresheet.ruleset }}</h2>
+  <ul class="list-disc">
+    <li><a class="text-indigo-500 hover:text-indigo-800 underline" href="/static/scoresheets/{{ scoresheet.folder }}/{{ scoresheet.fileBase }}.pdf" target="_blank" rel="noopener">{{ scoresheet.ruleset }} PDF Download</a></td>
+    <li><a class="text-indigo-500 hover:text-indigo-800 underline" href="/static/scoresheets/{{ scoresheet.folder }}/{{ scoresheet.fileBase }}.zip" target="_blank" rel="noopener">{{ scoresheet.ruleset }} ZIP Download</a></td>
+  </ul>
+</div>
+{% endfor %}

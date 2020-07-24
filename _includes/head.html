@@ -3,15 +3,13 @@
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="theme-color" content="#efefef">
   {%- if page.noindex -%}
     <meta name="robots" content="noindex">
   {%- endif -%}
-  <link rel="manifest" href="/static/manifest.json">
-  <link rel="preload" href="/static/img/icon.png" as="image">
-  <link rel="icon" href="/static/img/icon.png">
+  <link rel="preload" href="/static/img/icon-64.png" as="image">
+  <link rel="preload" href="/static/img/icon-64.webp" as="image">
+  <link rel="icon" href="/static/img/icon-64.png">
   {%- seo -%}
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="/static/css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>

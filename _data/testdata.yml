@@ -1,0 +1,9 @@
+- ruleset: FISAC-IRSF 2017-2018
+  folder: fisac-1718
+  files:
+    - name: Masters
+      path: masters.pdf
+    - name: Team
+      path: masters.pdf
+    - name: RopeScore v2 Export
+      path: ropescore-v2.json
