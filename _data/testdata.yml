@@ -4,6 +4,6 @@
     - name: Masters
       path: masters.pdf
     - name: Team
-      path: masters.pdf
+      path: teams.pdf
     - name: RopeScore v2 Export
       path: ropescore-v2.json
