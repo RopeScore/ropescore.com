@@ -14,3 +14,7 @@
     </main>
 
     {%- include footer.html -%}
+
+    {%- if site.ga -%}
+      {%- include google-analytics.html -%}
+    {%- endif -%}

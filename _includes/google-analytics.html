@@ -1,9 +1,43 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga }}"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  window.dataLayer = window.dataLayer || []
+  function gtag(){dataLayer.push(arguments)}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied'
+  })
 
-  gtag('config', '{{ site.ga }}');
+  function grantCookieConsent () {
+    document.cookie = `cookie-consent=allow; max-age=${60 * 60 * 24 * 356 * 3}; path=/`
+    checkCookieConsent()
+  }
+
+  function denyCookieConsent () {
+    document.cookie = `cookie-consent=deny; max-age=${60 * 60 * 24}; path=/`
+    checkCookieConsent()
+  }
+
+  function checkCookieConsent () {
+    if (document.cookie.includes('cookie-consent=allow')) {
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      })
+      document.getElementById('cookie-consent').classList.add('hidden')
+    } else if (document.cookie.includes('cookie-consent=deny')) {
+      gtag('consent', 'update', {
+        'analytics_storage': 'denied'
+      })
+      document.getElementById('cookie-consent').classList.add('hidden')
+    } else {
+      // we haven't showed the consent prompt or gotten an answer
+      document.getElementById('cookie-consent').classList.remove('hidden')
+      document.body.classList.add('mb-14')
+    }
+  }
+
+  checkCookieConsent()
+
+  gtag('js', new Date())
+  gtag('config', '{{ site.ga }}')
 </script>
